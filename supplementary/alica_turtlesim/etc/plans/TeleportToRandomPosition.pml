@@ -58,12 +58,12 @@
               {
                 "childKey": "min",
                 "parentKey": null,
-                "value": 0.1
+                "value": 30.1
               },
               {
                 "childKey": "max",
                 "parentKey": null,
-                "value": 10.0
+                "value": 40.0
               }
             ],
             "output": [

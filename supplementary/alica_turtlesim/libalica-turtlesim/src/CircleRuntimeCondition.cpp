@@ -48,16 +48,16 @@ void CircleRuntimeConditionConstraint::getConstraint(std::shared_ptr<alica::Prob
 
         // set range of variables
         // 0~10 is turtlesim default area size -> center is (5,5)
-        x->editRange().intersect(0, 10);
+        x->editRange().intersect(30, 40);
         y->editRange().intersect(0, 10);
         autodiff::TVec<2> pos(x, y);
 
         // place turtle between radiusMin and radiusMax
         constexpr float tolerance = 0.1;
-        constexpr float radius = 2.5;
+        constexpr float radius = 5.0;
         constexpr float radiusMin = radius - tolerance;
         constexpr float radiusMax = radius + tolerance;
-        const autodiff::TVec<2> center(h->constant(5.0), h->constant(5.0));
+        const autodiff::TVec<2> center(h->constant(35.0), h->constant(5.0));
 
         if (isLeader) // leader goes to center
         {
